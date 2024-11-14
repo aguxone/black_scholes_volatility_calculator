@@ -30,7 +30,7 @@ where:
 - \( T \) is the time to maturity or expiration (in years),
 - \( r \) is the risk-free interest rate (annualized) ,
 - \( N \) represents the cumulative distribution function of a standard normal distribution,
-- \( $ d_1 $ \) and \( $ d_2 $ \) are calculated as:
+- \( $$d_1$$ \) and \( $$d_2$$ \) are calculated as:
 
 $$
 d_1 = \frac{\ln\left(\frac{S}{K}\right) + \left(r + \frac{\sigma^2}{2}\right) T}{\sigma \sqrt{T}}
@@ -323,6 +323,7 @@ compare. Two ways of estimating historical volatility were used:
   weekends or holidays) but won\'t interfere as much in the analysis
   as they are few and it\'s values won\'t escape the deviation of the
   popoulation.
+- \"imp vol bs": It is the implied volatility calculated intertively with the bisection method from the black-ascholes formula, it is calculated for every row of the dataset.
 
 <div>
 <table border="1" class="dataframe">
