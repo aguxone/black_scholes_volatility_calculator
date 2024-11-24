@@ -1,5 +1,10 @@
 # **Computing Implied Volatilities for Argentine Options Dataset Using C++ and Python**
 
+## Check notebooks online right now
+Python: https://nbviewer.org/github/aguxone/black_scholes_volatility_calculator/blob/main/python_implementation/desarrollo_total_en_python.ipynb
+
+C++: https://nbviewer.org/github/aguxone/black_scholes_volatility_calculator/blob/main/cpp_implementation/blackscholes_rapidcsv_xtensor.ipynb
+
 ## Project Overview
 
 This project focuses on calculating implied volatilities for an options dataset from Argentina, a task that involves iterative calculations to estimate these values accurately. Originally developed in Python, the project leverages data science libraries like **pandas** for data manipulation and **matplotlib** for visualization. To explore the efficiency and performance of lower-level programming for scientific computing, the project was subsequently implemented in **C++** using **xtensor** for numerical operations and **rapidcsv** for data handling.
@@ -445,6 +450,13 @@ having a pre-made formula). Anyways black-scholes is at least a starting
 point of prediction and possibly would be a good theoritical framework
 for a hybrid model where differences with theory might be fitted with
 statiscal methods giving a more extrpolable model.
+
+### Compilation instructions for C++ and usage:
+From the folder cpp_implementation you can run the folllowing line using a GCC compatible compiler for c++17 standardd to compile an executable on the same folder. For windows i used Brecht Sanders precompiled g++, it also works on g++ default compilers for linux (tested on WSL kali-linux).
+
+`g++ -std=c++17 -Wall -Wextra blackscholes_rapidcsv_xtensor.cpp -I./include -s -static -oblackscholes_rapidcsv_xtensor_static.exe`
+
+Run the executable to process the csv file called "Exp_Octubre.csv" that lies on the same folder:
 
 ### Is C++ a right tool for This Problem?
 
